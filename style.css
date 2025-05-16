@@ -1,0 +1,176 @@
+body {
+  background: rgb(224, 21, 21);
+  background: linear-gradient(
+    90deg,
+    rgba(224, 21, 21, 1) 0%,
+    rgba(156, 82, 146, 1) 60%,
+    rgba(207, 0, 255, 1) 100%
+  );
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 100px;
+}
+
+.container {
+  font-family: monospace;
+  font-size: 24px;
+  padding: 0;
+  width: 500px;
+  height: 720px;
+  position: relative;
+  display: flex;
+}
+
+.box {
+  font-family: monospace;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  border-radius: 1rem 0 0 1rem;
+  text-align: center;
+}
+
+.box-radius-1 {
+  background-color: rgb(255, 255, 255);
+  border-radius: 2rem 0 0 2rem;
+  opacity: 0.8;
+}
+
+.box-radius-2 {
+  background-color: rgb(255, 255, 255);
+  border-radius: 0 2rem 2rem 0;
+  opacity: 0.5;
+}
+
+.current-container1 {
+  font-family: monospace;
+  font-size: 15px;
+  width: 200px;
+  height: 100px;
+  margin-left: 30%;
+  text-align: center;
+  padding-top: 4%;
+  border-radius: 1rem;
+  color: white;
+  background-color: rgb(243, 110, 210);
+  transform: translate(0px, 220px);
+}
+
+.current-container2 {
+  font-family: monospace;
+  font-size: 15px;
+  width: 200px;
+  height: 100px;
+  margin-left: 30%;
+  text-align: center;
+  padding-top: 4%;
+  border-radius: 1rem;
+  color: white;
+  background-color: rgb(243, 110, 210);
+  transform: translate(0px, 220px);
+}
+
+.middle-section {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 10px;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.newGameBtn {
+  font-size: 15px;
+  font-family: monospace;
+  background-color: white;
+  width: 160px;
+  height: 60px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  margin-top: 60%;
+  transition: transform 0.5s ease;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply the rotation animation */
+img.rotate {
+  animation: rotate 1s linear;
+}
+
+button {
+  transition: transform 0.2s;
+  font-size: 15px;
+  font-family: monospace;
+  background-color: white;
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin: 10px 0;
+}
+
+button.active {
+  transform: scale(0.95);
+}
+
+button#special-padding {
+  margin-top: 60px;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
